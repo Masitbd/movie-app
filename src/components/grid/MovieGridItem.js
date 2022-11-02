@@ -41,7 +41,7 @@ const MovieGridItem = () => {
                         className="text-gray-400 text-xs mt-2 hover:text-gray-600"
                         href="#"
                     >
-                        Learn with Sumit
+                        Movie Application
                     </a>
                     <p className="text-gray-400 text-xs mt-1">
                         200 views . May 3, 2022
