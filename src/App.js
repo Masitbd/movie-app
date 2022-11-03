@@ -4,13 +4,21 @@ import { Counter } from './features/counter/Counter';
 import Navbar from './components/navbar/Navbar';
 import Home from './pages/Home';
 import Movie from './pages/Movie';
+import Footer from './ui/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-      <Movie />
-    </div>
+    <>
+    <BrowserRouter>
+    <Navbar />
+     <Routes>
+       <Route path='/' element={<Home />} />
+       <Route path='/movies/:movieId' element={<Movie />} />
+       </Routes>    
+    <Footer />
+    </BrowserRouter>
+    </>
   );
 }
 

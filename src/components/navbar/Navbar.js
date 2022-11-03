@@ -1,6 +1,7 @@
 import React from 'react';
 import Search from './Search';
 import { BsFillCaretRightSquareFill, BsSearch } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -8,11 +9,13 @@ const Navbar = () => {
         <div
             className="max-w-7xl mx-auto px-5 lg:px-0 flex justify-between py-3"
         > 
+        <Link to='/'>
           <div className='flex'>
             <p className='pt-1 px-2'><BsFillCaretRightSquareFill /></p>
+            <p>Movie Application</p>
+            </div> 
+          </Link>
           
-          <p>Movie Application</p>
-          </div>
 
             
             <div
