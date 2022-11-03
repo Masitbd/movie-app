@@ -1,8 +1,10 @@
 import React from 'react';
+import ReactStars from 'react-rating-stars-component';
 import { Link } from 'react-router-dom';
 
 const MovieGridItem = ({movie={}}) => {
     const {id, title, type, producer, rating, thumbnail} = movie
+    
     return (
         <div
         className="col-span-12 sm:col-span-6 md:col-span-3 duration-300 hover:scale-[1.03]">
@@ -43,6 +45,14 @@ const MovieGridItem = ({movie={}}) => {
                         200 views . May 3, 2022
                     </p>
                     <p className="text-gray-400 text-xs mt-1">
+                        <ReactStars 
+                         size= {25}
+                         count= {5}
+                         value={rating}
+                         isHalf = {true}
+                        color= "#fffffg"
+                         
+                        />
                         {rating}
                     </p>
                 </div>
