@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Loading from '../../ui/Loading';
-import { fetchMovies } from '../movies/moviesSlice';
+import { fetchMovies } from '../../features/movies/moviesSlice';
 import MovieGridItem from './MovieGridItem';
 
 const MovieGrid = () => {
