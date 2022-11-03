@@ -1,6 +1,7 @@
-import axios from "axios"
+import axiosInstance from "../../utils/axios";
 
 export const getMovies = async ()=>{
- const response = await axios.get('/movies')
+ const response = await axiosInstance.get('/movies')
  return response.data;
+
 }

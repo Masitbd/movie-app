@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MovieGridItem = () => {
+const MovieGridItem = ({movie={}}) => {
+    const {id} = movie
     return (
         <div
         className="col-span-12 sm:col-span-6 md:col-span-3 duration-300 hover:scale-[1.03]">
         <div className="w-full flex flex-col">
             <div className="relative">
-                <Link to='/movies/1'>
+                <Link to={`/movies/${movie.id}`}>
                     <img
                         src="https://i3.ytimg.com/vi/6O4s7v28nlw/maxresdefault.jpg"
                         className="w-full h-auto"
