@@ -8,13 +8,9 @@ const Footer = () => {
         >
             <div>Copyright 2022 Movie Application.</div>
             <div>
-                <a
-                    href="https://youtube.com/learnwithsumit"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    Movie Channel
-                </a>
+                <p>Movie Channel</p>
+                    
+                
             </div>
         </div>
     </section>

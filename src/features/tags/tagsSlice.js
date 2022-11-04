@@ -12,7 +12,6 @@ const initialState={
 export const fetchTags = createAsyncThunk('tags/fetchTags', async ()=>{
 
     const tags = await getTags()
-    console.log('hello',tags);
     return tags;
 })
 

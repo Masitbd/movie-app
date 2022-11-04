@@ -1,9 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactStars from 'react-rating-stars-component';
-import { Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 
 const MovieGridItem = ({movie={}}) => {
-    const {id, title, type, producer, rating, thumbnail} = movie
+    const[items, setItems]= useState()
+    const {id, title, type, rating, thumbnail} = movie
+
+   
+    useEffect(()=>{
+        const movies= sessionStorage.getItem('cart')
+        console.log(movies)
+        if(movies){
+        setItems(JSON.parse(movies))
+    }
+    },[movie])
+
+    const setData= ()=>{
+
+        if (sessionStorage) {
+            let cart;
+            if (!sessionStorage['cart']) cart = [];
+            else cart = JSON.parse(sessionStorage['cart']);            
+            if (!(cart instanceof Array)) cart = [];
+            cart.push({id, title, type});
+    
+            sessionStorage.setItem('cart', JSON.stringify(cart));
+        }
+    }
+
+
     
     return (
         <div
@@ -16,7 +41,7 @@ const MovieGridItem = ({movie={}}) => {
                         className="w-full h-36"
                         alt={title}
                         
-                        onClick={()=>console.log('hello moto')}
+                        onClick={()=>setData()}
                     />
                     
                 </Link>
@@ -42,7 +67,7 @@ const MovieGridItem = ({movie={}}) => {
                         className="text-gray-400 text-xs mt-2 hover:text-gray-600"
                         to="/videos/1"
                     >
-                        {producer}
+                        {/* {producer} */}
                     </Link>
                     <p className="text-gray-400 text-xs mt-1">
                         200 views . May 3, 2022
@@ -61,6 +86,9 @@ const MovieGridItem = ({movie={}}) => {
                 </div>
             </div>
         </div>
+        {items?.map(item=><ul>
+            <li>{item.id}</li>
+        </ul>)}
     </div>
     );
 };
