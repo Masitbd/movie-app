@@ -3,17 +3,11 @@ import ReactStars from 'react-rating-stars-component';
 import {  Link } from 'react-router-dom';
 
 const MovieGridItem = ({movie={}}) => {
-    const[items, setItems]= useState()
+    
     const {id, title, type, rating, thumbnail} = movie
 
    
-    useEffect(()=>{
-        const movies= sessionStorage.getItem('cart')
-        console.log(movies)
-        if(movies){
-        setItems(JSON.parse(movies))
-    }
-    },[movie])
+   
 
     const setData= ()=>{
 
@@ -86,9 +80,7 @@ const MovieGridItem = ({movie={}}) => {
                 </div>
             </div>
         </div>
-        {items?.map(item=><ul>
-            <li>{item.id}</li>
-        </ul>)}
+        
     </div>
     );
 };

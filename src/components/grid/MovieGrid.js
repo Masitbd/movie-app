@@ -4,11 +4,14 @@ import Loading from '../../ui/Loading';
 import { fetchMovies } from '../../features/movies/moviesSlice';
 import MovieGridItem from './MovieGridItem';
 import Pagination from '../../ui/Pagination';
+import VieweItem from '../../view/VieweItem';
 
 const MovieGrid = () => {
    const dispatch =useDispatch();
+    const[items, setItems]= useState()
    const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage, setPostsPerPage] = useState(4);
+
 
    const {movies, isLoading, isError, error} = useSelector((state)=>state.movies)
   
@@ -17,6 +20,15 @@ const MovieGrid = () => {
    useEffect(()=>{
     dispatch(fetchMovies())
    },[dispatch])
+
+
+   useEffect(()=>{
+    const movies= sessionStorage.getItem('cart')
+    console.log(movies)
+    if(movies){
+    setItems(JSON.parse(movies))
+}
+},[movies])
 
    const lastPostIndex = currentPage * postsPerPage;
     const firstPostIndex = lastPostIndex - postsPerPage;
@@ -48,7 +60,7 @@ if(!isLoading && !isError && movies.length > 0){
     
     return (
         <section className="pt-12">
-        <section className="pt-12">
+            <section className="pt-12">
             <div
                 className="grid grid-cols-12 gap-4 max-w-7xl mx-auto px-5 lg:px-0 min-h-[300px]"
             >
@@ -59,6 +71,7 @@ if(!isLoading && !isError && movies.length > 0){
                 <div className="col-span-12">some error happened</div> --> */}
             </div>
         </section>
+        <VieweItem items={items} />
         <Pagination
         totalPosts={movies.length}
         postsPerPage={postsPerPage}
