@@ -11,6 +11,13 @@ const Pagination = ({
     for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
         pages.push(i);
     }
+
+    const mystyle = {
+        color: "white",
+        backgroundColor: "DodgerBlue",
+        padding: "10px",
+        fontFamily: "Arial"
+      };
     return (
         <section className="pt-12">
         <div
@@ -21,12 +28,14 @@ const Pagination = ({
                     <button
                         key={index}
                         onClick={() => setCurrentPage(page)}
-                        className={page === currentPage ? "active" : ""}>
+                        className={`${page === currentPage ? "bg-blue-500" : ""} bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded`}
+
+                       >
                         {page}
                     </button>
                 );
             })}
-  
+   
         </div>
     </section>
 
