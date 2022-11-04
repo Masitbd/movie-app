@@ -10,7 +10,7 @@ const Home = () => {
         <>
           <Tags />
           <MovieGrid />
-          <Pagination />
+          
         </>
     );
 };
