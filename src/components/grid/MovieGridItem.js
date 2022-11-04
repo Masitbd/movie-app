@@ -13,9 +13,12 @@ const MovieGridItem = ({movie={}}) => {
                 <Link to={`/movies/${id}`}>
                     <img
                         src={thumbnail}
-                        className="w-full h-auto"
+                        className="w-full h-36"
                         alt={title}
+                        
+                        onClick={()=>console.log('hello moto')}
                     />
+                    
                 </Link>
 
             </div>

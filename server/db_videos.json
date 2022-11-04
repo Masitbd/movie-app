@@ -3,72 +3,168 @@
         {
             "id": 1,
             "title": "All Is Lost",
+            "year": 2023,
             "type": "Action, Adventure, Drama",
             "producer": "",
             "rating": 3.5,
-            "thumbnail": "https://cdn.pixabay.com/photo/2018/06/18/21/55/shark-3483459_960_720.jpg",
-            "tags": ["javascript", "react", "tips"]
+            "thumbnail": "https://img.freepik.com/free-psd/silver-fantasy-text-effect_125540-1872.jpg?w=1480&t=st=1667561919~exp=1667562519~hmac=1b0a510861da258b9a607d7b09958c0cfe1dd97f198c8ef524973d0ce39f1e26",
+            "tags": ["Action", "Adventure", "Drama"]
         },
         {
             "id": 2,
-            "title": "All Is Lost",
-            "type": "Action, Adventure, Drama",
+            "title": "The Sandpiper",
+            "year": 1965,
+            "type": "Drama, Romance",
             "producer": "",
-            "rating": 3.5,
+            "rating": 2.10,
             "thumbnail": "https://cdn.pixabay.com/photo/2018/06/18/21/55/shark-3483459_960_720.jpg",
-            "tags": ["javascript", "react", "tips"]
+            "tags": ["Romance", "Drama"]
         },
         {
             "id": 3,
+            "title": "Crystal Fairy & the Magical",
+            "year": 2023,
+            "type": "Adventure, Comedy",
+            "producer": "Film Nior",
+            "rating": 4.50,
+            "thumbnail": "https://img.freepik.com/free-psd/grunge-metallic-text-effect_125540-1527.jpg?w=1480&t=st=1667561961~exp=1667562561~hmac=c9228be677a319d643cc44d54b2f47a823dc5b7903001f1b12a757e3fc02fe34",
+            "tags": ["Romance", "Drama"]
+        },
+        {
+            "id": 4,
+            "title": "Dr. Terror's House of Horrors",
+            "year": 1965,
+            "type": "Adventure, Horror",
+            "producer": "Sei Fi",
+            "rating": 4.3,
+            "thumbnail": "https://as1.ftcdn.net/v2/jpg/04/39/83/08/1000_F_439830865_TT797cKMJHat21ILWTebw2SWsO2XwEpG.jpg",
+            "tags": ["Horror"]
+        },
+        {
+            "id": 5,
+            "title": "GoldenEye",
+            "year": 1995,
+            "type": "Adventure, Thriller",
+            "producer": "Imax",
+            "rating": 4.8,
+            "thumbnail": "https://as2.ftcdn.net/v2/jpg/04/89/29/03/1000_F_489290382_KpJq2pKnVfPURiTkuJanWZTBrInrzCPJ.jpg",
+            "tags": ["Horror"]
+        },
+        {
+            "id": 6,
             "title": "All Is Lost",
+            "year": 2023,
             "type": "Action, Adventure, Drama",
             "producer": "",
             "rating": 3.5,
-            "thumbnail": "https://cdn.pixabay.com/photo/2018/06/18/21/55/shark-3483459_960_720.jpg",
-            "tags": ["javascript", "react", "tips"]
+            "thumbnail": "https://as2.ftcdn.net/v2/jpg/04/61/90/31/1000_F_461903171_9qRfyPL8E8p1cVt9KY1iW9dn4v9jue6N.jpg",
+            "tags": ["Action", "Adventure", "Drama"]
+        },
+        {
+            "id": 7,
+            "title": "The Sandpiper",
+            "year": 1965,
+            "type": "Drama, Romance",
+            "producer": "",
+            "rating": 2.10,
+            "thumbnail": "https://as2.ftcdn.net/v2/jpg/03/44/56/15/1000_F_344561586_NUWbDibaGdEBmtU1FpaEH7SCCQTl2JYF.jpg",
+            "tags": ["Romance", "Drama"]
+        },
+        {
+            "id": 8,
+            "title": "Crystal Fairy & the Magical",
+            "year": 2023,
+            "type": "Adventure, Comedy",
+            "producer": "Film Nior",
+            "rating": 4.50,
+            "thumbnail": "https://as2.ftcdn.net/v2/jpg/05/37/46/15/1000_F_537461551_fvmj7JvHR08zCORLbotAXfPXjdHsRCNx.jpg",
+            "tags": ["Romance", "Drama"]
+        },
+        {
+            "id": 9,
+            "title": "Dr. Terror's House of Horrors",
+            "year": 1965,
+            "type": "Adventure, Horror",
+            "producer": "Sei Fi",
+            "rating": 4.3,
+            "thumbnail": "https://as2.ftcdn.net/v2/jpg/05/37/45/25/1000_F_537452588_48XmJdKYQ4w5NLLDdBsruZzFC60fT3pE.jpg",
+            "tags": ["Horror"]
+        },
+        {
+            "id": 10,
+            "title": "GoldenEye",
+            "year": 1995,
+            "type": "Adventure, Thriller",
+            "producer": "Imax",
+            "rating": 4.8,
+            "thumbnail": "https://as2.ftcdn.net/v2/jpg/05/42/84/59/1000_F_542845927_Oo4arQZkYQ0gwsMCGMNijp1ZXvZnvSJi.jpg",
+            "tags": ["Horror"]
+        },
+        {
+            "id": 11,
+            "title": "Dr. Terror's House of Horrors",
+            "year": 1965,
+            "type": "Adventure, Horror",
+            "producer": "Sei Fi",
+            "rating": 4.3,
+            "thumbnail": "https://as1.ftcdn.net/v2/jpg/05/42/84/56/1000_F_542845601_3ZTkTPFFdGAJhRIuQ3f1IyIwnFMObHB7.jpg",
+            "tags": ["Animation"]
+        },
+        {
+            "id": 12,
+            "title": "GoldenEye",
+            "year": 1995,
+            "type": "Adventure, Thriller",
+            "producer": "Imax",
+            "rating": 4.8,
+            "thumbnail": "https://as2.ftcdn.net/v2/jpg/05/42/84/49/1000_F_542844913_ZxwxuN67tUoJYgVbbjqPrw2UyMU5h1Ki.jpg",
+            "tags": ["Children"]
         }
+
+      
+      
       
     ],
     "tags": [
         {
             "id": 1,
-            "title": "javascript"
+            "title": "Action"
         },
         {
             "id": 2,
-            "title": "react"
+            "title": "Adventure"
         },
         {
             "id": 3,
-            "title": "tips"
+            "title": "Drama"
         },
         {
             "id": 4,
-            "title": "vscode"
+            "title": "Comedy"
         },
         {
             "id": 5,
-            "title": "tailwind"
+            "title": "Horror"
         },
         {
             "id": 6,
-            "title": "css"
+            "title": "Romance"
         },
         {
             "id": 7,
-            "title": "debounce"
+            "title": "Thriller"
         },
         {
             "id": 8,
-            "title": "sass"
+            "title": "Children"
         },
         {
             "id": 9,
-            "title": "ui"
+            "title": "Animation"
         },
         {
             "id": 10,
-            "title": "router"
+            "title": "Mystery"
         }
     ]
 }
