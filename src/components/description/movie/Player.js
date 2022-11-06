@@ -5,7 +5,7 @@ const Player = () => {
     <iframe
         width="100%"
         class="aspect-video"
-        src="https://www.youtube-nocookie.com/embed/6O4s7v28nlw"
+        src="https://as2.ftcdn.net/v2/jpg/02/15/70/37/1000_F_215703713_LWHKXovZmH46zp6bw3f4sJpFyjNNOQsZ.jpg"
         title="Some video title"
         frameBorder=""
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
