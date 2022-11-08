@@ -26,7 +26,9 @@ const MovieGrid = () => {
     const movies= sessionStorage.getItem('cart')
     console.log(movies)
     if(movies){
-    setItems(JSON.parse(movies))
+    const findRecent = JSON.parse(movies) 
+    var unique = Array.from(new Set(findRecent.map(JSON.stringify))).map(JSON.parse);
+    setItems(unique)
 }
 },[movies])
 
@@ -34,7 +36,7 @@ const MovieGrid = () => {
     const firstPostIndex = lastPostIndex - postsPerPage;
     const currentPosts = movies.slice(firstPostIndex, lastPostIndex);
 
-
+    console.log("find",items);
    let content;
    if(isLoading){
     
@@ -67,8 +69,6 @@ if(!isLoading && !isError && movies.length > 0){
                
               {content}
 
-               {/*  <!-- error section
-                <div className="col-span-12">some error happened</div> --> */}
             </div>
         </section>
         <VieweItem items={items} />

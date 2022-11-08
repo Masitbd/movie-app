@@ -17,7 +17,6 @@ const MovieGridItem = ({movie={}}) => {
             else cart = JSON.parse(sessionStorage['cart']);            
             if (!(cart instanceof Array)) cart = [];
             cart.push({id, title, type});
-    
             sessionStorage.setItem('cart', JSON.stringify(cart));
         }
     }
