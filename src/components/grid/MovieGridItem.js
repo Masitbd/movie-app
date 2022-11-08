@@ -31,7 +31,7 @@ const MovieGridItem = ({movie={}}) => {
                 <Link to={`/movies/${id}`}>
                     <img
                         src={thumbnail}
-                        className="w-full h-36"
+                        className="h-36 h-36"
                         alt={title}
                         
                         onClick={()=>setData()}
@@ -44,7 +44,7 @@ const MovieGridItem = ({movie={}}) => {
             <div className="flex flex-row mt-2 gap-2">
                 
                 <div clas="flex flex-col">
-                    <Link to='/videos/1'>
+                    <Link to={`/movies/${id}`}>
                         <p
                             className="text-slate-900 text-sm font-semibold"
                         >
@@ -58,7 +58,7 @@ const MovieGridItem = ({movie={}}) => {
                     </Link>
                     <Link
                         className="text-gray-400 text-xs mt-2 hover:text-gray-600"
-                        to="/videos/1"
+                        to={`/movies/${id}`}
                     >
                         {/* {producer} */}
                     </Link>

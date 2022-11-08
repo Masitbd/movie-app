@@ -24,7 +24,7 @@ const MovieGrid = () => {
 
    useEffect(()=>{
     const movies= sessionStorage.getItem('cart')
-    console.log(movies)
+    
     if(movies){
     const findRecent = JSON.parse(movies) 
     var unique = Array.from(new Set(findRecent.map(JSON.stringify))).map(JSON.parse);
@@ -36,7 +36,7 @@ const MovieGrid = () => {
     const firstPostIndex = lastPostIndex - postsPerPage;
     const currentPosts = movies.slice(firstPostIndex, lastPostIndex);
 
-    console.log("find",items);
+    
    let content;
    if(isLoading){
     
