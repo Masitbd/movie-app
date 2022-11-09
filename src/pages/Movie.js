@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import MovieDescription from '../components/description/movie/MovieDescription';
 import Player from '../components/description/movie/Player';
-import { fetchMovie } from '../components/movie/movieSlice';
+import { fetchMovie } from '../features/movie/movieSlice';
 import RelatedMovieList from '../list/RelatedMovieList';
 import Loading from '../ui/Loading';
 
@@ -19,7 +19,7 @@ const Movie = () => {
    dispatch(fetchMovie(movieId))
    },[dispatch, movieId])
 
-
+const {id, tags} = movie || {}
 
    // what to render
 
@@ -36,7 +36,7 @@ const Movie = () => {
    content=<div className='col-span-12'>No video found</div>
  
 
-   if(!isLoading && !isError && movie?.id)
+   if(!isLoading && !isError && movie.id >0)
    content=<div className='col-span-12'>{error}</div>
    content= <div class="mx-auto max-w-7xl px-2 pb-20 min-h-[400px]">
    <div class="grid grid-cols-3 gap-2 lg:gap-8">
@@ -45,8 +45,12 @@ const Movie = () => {
 
            <MovieDescription />
        </div>
-
-       <RelatedMovieList />
+    
+       
+        <RelatedMovieList id={id} tags={tags} />
+           
+{/*  { console.log("related movie list", movie.id, movie.tags)} */}
+   
    </div>
 </div>
 
