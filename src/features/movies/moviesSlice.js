@@ -10,8 +10,9 @@ const initialState= {
 
 export const fetchMovies = createAsyncThunk(
     'movies/fetchMovies',
-    async () =>{
-        const movies = await getMovies()
+    
+    async ({tags, search}) =>{
+    const movies = await getMovies(tags, search)
         return movies
     }
     )

@@ -15,11 +15,12 @@ const MovieGrid = () => {
 
    const {movies, isLoading, isError, error} = useSelector((state)=>state.movies)
   
-
+   const {tags, search} = useSelector(state => state.filter)
+  console.log('tags filter', tags);
 
    useEffect(()=>{
-    dispatch(fetchMovies())
-   },[dispatch])
+    dispatch(fetchMovies({tags, search}))
+   },[dispatch, tags, search])
 
 
    useEffect(()=>{

@@ -8,10 +8,10 @@ const VieweItem = ({items}) => {
 
             {items?.map(item=>{
                 
-              return <div class="flex justify-center bg-slete-200">
-              <div class="block p-6 rounded-lg shadow-lg bg-slate-100 max-w-sm">
-                <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">{item.title}</h5>
-                <p class="text-gray-700 text-base mb-4">
+              return <div className="flex justify-center bg-slete-200">
+              <div className="block p-6 rounded-lg shadow-lg bg-slate-100 max-w-sm">
+                <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2">{item.title}</h5>
+                <p className="text-gray-700 text-base mb-4">
                   {item.type}
                 </p>
               </div>

@@ -4,12 +4,12 @@ const Player = ({movie}) => {
     return (
     <iframe
         width="100%"
-        class="aspect-video"
+        className="aspect-video"
         src={movie.thumbnail}
         title="Some video title"
         frameBorder=""
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullscreen
+        allowFullScreen
         scrolling="no"
     ></iframe>
     );
